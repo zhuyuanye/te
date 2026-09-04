@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // 这是 ~/.config/opencode/opencode.jsonc 的示例内容。
+  // 项目配置会与此全局配置合并，并覆盖冲突字段。
+  "autoupdate": true,
+  "small_model": "provider/fast-inexpensive-model",
+  "permission": {
+    "rm *": "deny",
+    "git push*": "ask"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "internal-tools": {
+      "type": "local",
+      "command": ["npx", "-y", "replace-with-a-real-mcp-server"],
+      "enabled": false,
+      "environment": {
+        "INTERNAL_API_TOKEN": "{env:INTERNAL_API_TOKEN}"
+      }
+    }
+  }
+}

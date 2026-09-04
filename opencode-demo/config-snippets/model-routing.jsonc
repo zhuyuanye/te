@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // 请将这些 ID 替换为 `opencode models` 返回的真实值。
+  "model": "provider/main-coding-model",
+  "small_model": "provider/fast-inexpensive-model",
+
+  "agent": {
+    "architect": {
+      "model": "provider/strong-reasoning-model",
+      "temperature": 0.1
+    },
+    "reviewer": {
+      "model": "provider/strong-review-model",
+      "temperature": 0.1
+    },
+    "docs": {
+      "model": "provider/fast-inexpensive-model",
+      "temperature": 0.2
+    }
+  }
+}

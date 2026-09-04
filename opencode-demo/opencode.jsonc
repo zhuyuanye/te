@@ -1,0 +1,59 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // 为了便于复制到不同电脑，项目不固定模型。
+  // 请运行 `opencode models --refresh`，选择演示者账户实际可用的模型。
+  "autoupdate": false,
+  "share": "disabled",
+  "formatter": true,
+  "lsp": true,
+
+  "skills": {
+    "paths": [".opencode/skills"]
+  },
+
+  "permission": {
+    "*": "ask",
+    "read": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "lsp": "allow",
+    "skill": {
+      "*": "allow"
+    },
+    "bash": {
+      "*": "ask",
+      "pwd": "allow",
+      "git status*": "allow",
+      "git diff*": "allow",
+      "git log*": "allow",
+      "git branch*": "allow",
+      "java -version*": "allow",
+      "mvn -version*": "allow",
+      "mvn compile*": "allow",
+      "mvn test*": "allow",
+      "mvn *test*": "allow",
+      "mvn verify*": "allow",
+      "rm *": "deny",
+      "git push*": "deny",
+      "mvn deploy*": "deny",
+      "vercel *": "deny",
+      "terraform apply*": "deny"
+    },
+    "edit": {
+      "*": "ask",
+      ".env": "deny",
+      ".env.*": "deny"
+    },
+    "webfetch": "ask"
+  },
+
+  // 这个示例被有意禁用。请先替换成真实命令，再将它启用。
+  "mcp": {
+    "example-local": {
+      "type": "local",
+      "command": ["npx", "-y", "replace-with-a-real-mcp-server"],
+      "enabled": false
+    }
+  }
+}
